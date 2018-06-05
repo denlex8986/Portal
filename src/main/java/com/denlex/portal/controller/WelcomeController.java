@@ -1,7 +1,6 @@
 package com.denlex.portal.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,8 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(path = {"/", "/welcome"})
 public class WelcomeController {
 	@GetMapping
-	public String welcome(Model model) {
-		model.addAttribute("title", "Вас приветствует зелепупкинский мегагамерский портал");
+	public String welcome() {
 		return "index";
+	}
+
+	@GetMapping(path = "/forum")
+	public String forum() {
+		return "forum";
 	}
 }
