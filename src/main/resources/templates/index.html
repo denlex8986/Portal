@@ -3,44 +3,68 @@
 <head>
 	<meta charset="UTF-8">
 	<title th:title="#{main.page}">Главная страница</title>
-	<link href="../static/css/main.css"
-		  th:href="@{/css/main.css}">
-	<link th:href="@{/css/bootstrap.css}"
-		  href="../static/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+
+	<link href="../static/css/main.css" th:href="@{/css/main.css}" type="text/css" rel="stylesheet">
+	<link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 
-<div class="container">
-	<div class="row justify-content-center">
-		<h1 th:text="#{streams}">Стримы</h1>
+<div class="container body">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.html" th:href="${/}">
+			<img src="https://picsum.photos/30"/>
+		</a>
+
+		<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon">
+			</span>
+		</button>-->
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Стримы<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Видео</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Клипы</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Турниры</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Помощь</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Найти" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+			</form>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		</div>
 	</div>
 </div>
 
-<div class="container">
-	<div class="col-md-12 text-md-right justify-content-center">
-
-		<a th:text="#{forum}" href="//forum" th:href="@{/forum}">Форум</a>
-	</div>
 </div>
-
-<div class="container">
-	<div class="row justify-content-center">
-		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-	</div>
-	<div class="row justify-content-center">
-		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-	</div>
-	<div class="row justify-content-center">
-		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-	</div>
-</div>
-
 
 <script th:src="@{/static/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
 

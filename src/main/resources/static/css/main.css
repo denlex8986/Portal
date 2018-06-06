@@ -1,3 +1,16 @@
+html {
+	background: #4e555b;
+}
+
+.body {
+	margin: 0 auto;
+	background: #0c5460;
+}
+
+.head {
+	margin-bottom: 20px;
+}
+
 img {
 	margin: 5px;
 	border: black solid 5px;
