@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Test page</title>
+
+	<title th:title="#{main.page}">Главная страница</title>
+
+	<link href="../static/css/main.css" th:href="@{/css/main.css}" type="text/css" rel="stylesheet">
+	<link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col border">col</div>
+		<div class="col border">col</div>
+		<div class="col border">col</div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-sm-2 border">col</div>
+		<div class="col-2 col-sm-4 border">col</div>
+		<div class="col-6 col-sm-3 border">col</div>
+		<div class="col-2 col-sm-3 border">col</div>
+	</div>
+</div>
+</body>
+</html>

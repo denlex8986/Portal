@@ -5,20 +5,16 @@
 	<title th:title="#{main.page}">Главная страница</title>
 
 	<link href="../static/css/main.css" th:href="@{/css/main.css}" type="text/css" rel="stylesheet">
-	<link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 
-<div class="container body">
+<div class="container-fluid">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="index.html" th:href="${/}">
+		<a class="navbar-brand" href="index.html" th:href="@{/index}">
 			<img src="https://picsum.photos/30"/>
 		</a>
-
-		<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon">
-			</span>
-		</button>-->
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
@@ -38,35 +34,87 @@
 					<a class="nav-link" href="#">Помощь</a>
 				</li>
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Найти" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
-			</form>
 		</div>
-	</nav>
 
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
-			<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Вход</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registrationModal">Регистрация
+		</button>
+	</nav>
+</div>
+
+<!-- Диалог регистрации -->
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+	 aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel" th:text="#{registration}">Регистрация</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="email" class="col-form-label" th:text="#{registration.email}">e-mail</label>
+						<input id="email" class="form-control" type="input"
+							   th:placeholder="#{registration.email}"
+							   placeholder="E-mail">
+					</div>
+
+					<div class="form-group">
+						<label for="login" class="col-form-label">Логин</label>
+						<input id="login" class="form-control" type="text"
+							   th:placeholder="#{registration.login}"
+							   placeholder="Логин">
+					</div>
+
+					<div class="form-group">
+						<label for="password" class="col-form-label">Пароль</label>
+						<input id="password" class="form-control" type="password"
+							   th:placeholder="#{registration.password}"
+							   placeholder="Пароль">
+					</div>
+
+					<button class="btn btn-dark" id="register" type="button"
+							th:text="#{registration.register}">Зарегистрироваться
+					</button>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
 
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+		<div class="col-md-3"><img src="https://picsum.photos/200"></div>
+	</div>
 </div>
 
-<script th:src="@{/static/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+
+<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
 
 </body>
 </html>
