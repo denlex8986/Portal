@@ -1,0 +1,46 @@
+2018-06-07 02:00:00.283  INFO 19354 --- [restartedMain] c.d.p.PortalApplication                  : Starting PortalApplication on nd-laptop with PID 19354 (/home/nd/Projects/Java/Portal/target/classes started by nd in /home/nd/Projects/Java/Portal)
+2018-06-07 02:00:00.289  INFO 19354 --- [restartedMain] c.d.p.PortalApplication                  : No active profile set, falling back to default profiles: default
+2018-06-07 02:00:00.573  INFO 19354 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54e19f43: startup date [Thu Jun 07 02:00:00 MSK 2018]; root of context hierarchy
+2018-06-07 02:00:04.561  INFO 19354 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-06-07 02:00:04.898  INFO 19354 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ea57f449] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-07 02:00:05.701  INFO 19354 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-06-07 02:00:05.764  INFO 19354 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-06-07 02:00:05.764  INFO 19354 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-07 02:00:05.770  INFO 19354 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-06-07 02:00:05.875  INFO 19354 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-06-07 02:00:05.875  INFO 19354 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 5304 ms
+2018-06-07 02:00:05.968  INFO 19354 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-06-07 02:00:05.969  INFO 19354 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet webServlet mapped to [/h2-console/*]
+2018-06-07 02:00:05.971  INFO 19354 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-07 02:00:06.347  INFO 19354 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2018-06-07 02:00:06.474  INFO 19354 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2018-06-07 02:00:06.573  INFO 19354 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 02:00:07.825  INFO 19354 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 02:00:08.144  WARN 19354 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-06-07 02:00:08.211  INFO 19354 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/random_user || /index/random_user],methods=[GET]}" onto public com.denlex.portal.model.User com.denlex.portal.controller.UserRegistrationController.getRandomUser()
+2018-06-07 02:00:08.213  INFO 19354 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/param_test || /index/param_test],methods=[POST]}" onto public java.lang.String com.denlex.portal.controller.UserRegistrationController.pathPram(java.lang.Long)
+2018-06-07 02:00:08.214  INFO 19354 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register || /index/register],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.denlex.portal.model.User> com.denlex.portal.controller.UserRegistrationController.registerUser(com.denlex.portal.model.User)
+2018-06-07 02:00:08.215  INFO 19354 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || /index],methods=[GET]}" onto public java.lang.String com.denlex.portal.controller.WelcomeController.welcome()
+2018-06-07 02:00:08.215  INFO 19354 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/forum || /index/forum],methods=[GET]}" onto public java.lang.String com.denlex.portal.controller.WelcomeController.forum()
+2018-06-07 02:00:08.218  INFO 19354 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 02:00:08.218  INFO 19354 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 02:00:08.275  INFO 19354 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54e19f43: startup date [Thu Jun 07 02:00:00 MSK 2018]; root of context hierarchy
+2018-06-07 02:00:08.994  WARN 19354 --- [restartedMain] o.t.t.TemplateMode                       : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-06-07 02:00:09.109  INFO 19354 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-07 02:00:09.131  INFO 19354 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-07 02:00:09.132  INFO 19354 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-07 02:00:09.136  INFO 19354 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-07 02:00:09.188  INFO 19354 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-07 02:00:09.191  INFO 19354 --- [restartedMain] c.d.p.PortalApplication                  : Started PortalApplication in 11.726 seconds (JVM running for 25.243)
+2018-06-07 02:00:35.807  INFO 19354 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-07 02:00:35.807  INFO 19354 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-07 02:00:35.819  INFO 19354 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2018-06-07 02:00:36.044  INFO 19354 --- [http-nio-8080-exec-2] c.d.p.c.UserRegistrationController       : User was register
+2018-06-07 02:01:11.706  INFO 19354 --- [Thread-41] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54e19f43: startup date [Thu Jun 07 02:00:00 MSK 2018]; root of context hierarchy
+2018-06-07 02:01:11.709  INFO 19354 --- [Thread-41] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-07 02:01:11.710  INFO 19354 --- [Thread-41] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-06-07 02:01:11.710  INFO 19354 --- [Thread-41] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 02:01:11.713  WARN 19354 --- [Thread-41] o.s.b.f.s.DisposableBeanAdapter          : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
+2018-06-07 02:01:11.713  INFO 19354 --- [Thread-41] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2018-06-07 02:01:11.715  INFO 19354 --- [Thread-41] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
