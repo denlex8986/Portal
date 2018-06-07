@@ -33,6 +33,10 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">Помощь</a>
 				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/admin/users" th:href="@{/admin/users}">Пользователи</a>
+				</li>
 			</ul>
 		</div>
 
@@ -76,7 +80,7 @@
 							   placeholder="Пароль">
 					</div>
 
-					<button class="btn btn-dark" id="register" type="button"
+					<button class="btn btn-dark" id="register" type="submit"
 							th:text="#{registration.register}">Зарегистрироваться
 					</button>
 				</form>

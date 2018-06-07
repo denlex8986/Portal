@@ -32,4 +32,9 @@ public class DefaultUserService implements UserService {
 		StreamSupport.stream(userRepository.findAll().spliterator(), false).forEach(e -> users.add(e));
 		return users;
 	}
+
+	@Override
+	public User findByEmail(String email) {
+		return userRepository.findByEmail(email);
+	}
 }

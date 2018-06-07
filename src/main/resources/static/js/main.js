@@ -1,45 +1,33 @@
 $(document).ready(function () {
-	$("#register").bind("click", function() {
+	$("#register").bind("click", function(event) {
+
+		event.preventDefault();
+
+		var user = {}
+		user["email"] = $("#email").val();
+		user["login"] = $("#login").val();
+		user["password"] = $("#password").val();
+
+		/*var user = {
+			'id' : '1',
+			'login' : 'test',
+			'email' : 'test@mail.ru',
+			'password' : 'password'
+		}*/
+
+		var userJSON = JSON.stringify(user);
+
 		$.ajax({
 			url: "/register",
 			type: "POST",
+			data: userJSON,
 			dataType: "json",
+			contentType: "application/json; charset=utf-8",
 			success: function () {
 				console.log("УРАА");
 			}
 		});
+
+		$('#registrationModal').modal('hide');
 	});
 });
-/*function onUserRegister() {
-	console.log("before ajax");
-
-	/!*$.ajax({
-		type: "POST",
-		url: "/register",
-		dataType: "json",
-		success: function () {
-			console.log("Register successfully registered");
-		},
-		error: function () {
-			console.log("Register user ERROR");
-		}
-	});*!/
-	$.ajax({
-		type: 'POST',
-		url: '/register',
-		dataType: 'json',
-		success: function () {
-			console.log("Success!")
-		}
-	});
-}*/
-
-/*
-$.ajax({
-	type: 'POST',
-	url: '/register',
-	dataType: 'json',
-	success: function () {
-		console.log("Success!")
-	}
-});*/
