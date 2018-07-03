@@ -1,17 +1,44 @@
 html {
-	background: #4e555b;
+	background: #046169;
 }
 
 .body {
 	margin: 0 auto;
-	background: #0c5460;
+	background: #02474d;
 }
 
 .head {
 	margin-bottom: 20px;
 }
 
+
 img {
 	margin: 5px;
 	border: black solid 5px;
+}
+
+#centerPanel{
+	background: #02474d;
+}
+
+/*Смена цвета бордэра при наведении мыши*/
+.nav-item:hover {
+	background:#57acaf;
+}
+
+/*Смена цвета надписи при наведении мыши*/
+.nav-item:hover a {
+	color:#fff;
+}
+
+.nav-link{
+	color: #fff;
+	font-size: 18pt;
+	font-weight: bold;
+
+}
+
+.btn-primary{
+	margin-right: 5pt;
+	width: 150px;
 }
