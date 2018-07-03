@@ -39,14 +39,15 @@
 			</ul>
 		</div>
 
-        <form class="form-row">
-            <div class="col">
-                <input class="form-control" type="search" placeholder="Search">
-            </div>
-            <div class="col">
-                <button class="btn btn-outline-success bg-success" type="submit"><ion-icon name="search"></ion-icon></button>
-            </div>
-        </form>
+		<div class="input-group col-md-4">
+			<input class="form-control py-2" type="search" value="search" id="example-search-input">
+			<span class="input-group-button">
+                <button class="btn">
+					<img src="../static/img/svg/search.svg">
+                </button>
+            </span>
+
+		</div>
 		<!--Строка поиска-->
 <!--		<form class="form-inline">
 			<input class="form-control" type="search" placeholder="Найти">
@@ -55,8 +56,8 @@
 			</button>
 		</form>-->
 
-		<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" >Вход</button>
-		<button type="button" class="btn btn-info" data-toggle="modal" data-target="#registrationModal">Регистрация
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Вход</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registrationModal">Регистрация
 		</button>
 	</nav>
 </div>

@@ -23,7 +23,7 @@ img {
 
 /*Смена цвета бордэра при наведении мыши*/
 .nav-item:hover {
-	background: #17a2b8;
+	background:#57acaf;
 }
 
 /*Смена цвета надписи при наведении мыши*/
@@ -38,9 +38,13 @@ img {
 
 }
 
-.btn-info{
+.btn-primary{
 	margin-right: 5pt;
 	width: 150px;
 }
 
-
+.form-control:focus {
+	outline: 0 !important;
+	border-color: initial;
+	box-shadow: none;
+}
