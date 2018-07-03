@@ -42,3 +42,9 @@ img {
 	margin-right: 5pt;
 	width: 150px;
 }
+
+.form-control:focus {
+	outline: 0 !important;
+	border-color: initial;
+	box-shadow: none;
+}
