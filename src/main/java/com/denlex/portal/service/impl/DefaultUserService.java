@@ -1,6 +1,6 @@
 package com.denlex.portal.service.impl;
 
-import com.denlex.portal.dao.UserRepository;
+import com.denlex.portal.repo.UserRepository;
 import com.denlex.portal.model.User;
 import com.denlex.portal.service.UserService;
 import org.springframework.stereotype.Service;
@@ -22,12 +22,12 @@ public class DefaultUserService implements UserService {
 	}
 
 	@Override
-	public void saveUser(User user) {
+	public void save(User user) {
 		userRepository.save(user);
 	}
 
 	@Override
-	public List<User> getAllUsers() {
+	public List<User> findAll() {
 		List<User> users = new ArrayList<>();
 		StreamSupport.stream(userRepository.findAll().spliterator(), false).forEach(e -> users.add(e));
 		return users;

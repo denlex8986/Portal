@@ -2,10 +2,10 @@ html {
 	background: #046169;
 }
 
-/*.body {
+.body {
 	margin: 0 auto;
 	background: #02474d;
-}*/
+}
 
 .head {
 	margin-bottom: 20px;
@@ -36,9 +36,8 @@ img {
 
 .nav-link{
 	color: #fff;
-	font-size: 18pt;
+	font-size: 16pt;
 	font-weight: bold;
-
 }
 
 .btn-info{
@@ -50,4 +49,11 @@ img {
 	outline: 0 !important;
 	border-color: initial;
 	box-shadow: none;
+}
+
+.avatar {
+	background: url("https://picsum.photos/36") no-repeat center center;
+	width: 36px;
+	height: 36px;
+	background-size: 36px;
 }
