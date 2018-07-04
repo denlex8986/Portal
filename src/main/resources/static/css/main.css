@@ -2,15 +2,18 @@ html {
 	background: #046169;
 }
 
-.body {
+/*.body {
 	margin: 0 auto;
 	background: #02474d;
-}
+}*/
 
 .head {
 	margin-bottom: 20px;
 }
 
+#main{
+	background: #02474d;
+}
 
 img {
 	margin: 5px;
@@ -23,7 +26,7 @@ img {
 
 /*Смена цвета бордэра при наведении мыши*/
 .nav-item:hover {
-	background:#57acaf;
+	background:#17A2B8;
 }
 
 /*Смена цвета надписи при наведении мыши*/
@@ -38,7 +41,7 @@ img {
 
 }
 
-.btn-primary{
+.btn-info{
 	margin-right: 5pt;
 	width: 150px;
 }
