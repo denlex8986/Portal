@@ -2,52 +2,92 @@ html {
 	background: #046169;
 }
 
-/*.body {
-	margin: 0 auto;
-	background: #02474d;
-}*/
-
-.head {
-	margin-bottom: 20px;
+.container-fluid{
+	background: #046169;
+}
+/*Убираем линии в развернутом меню на маленьком экране*/
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: transparent;
+	box-shadow: none;
 }
 
-#main{
-	background: #02474d;
+/* цвет фона и рамки навигационного меню */
+.navbar-default{
+	background-color: #10898d;
+	border-color: #10898d;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+
+}
+/* Цвет пунктов навигационного меню */
+.navbar-default .navbar-nav > li > a {
+	color: white;
 }
 
-img {
-	margin: 5px;
-	border: black solid 5px;
-}
-
-#centerPanel{
-	background: #02474d;
-}
-
-/*Смена цвета бордэра при наведении мыши*/
-.nav-item:hover {
-	background:#17A2B8;
-}
-
-/*Смена цвета надписи при наведении мыши*/
-.nav-item:hover a {
-	color:#fff;
-}
-
-.nav-link{
-	color: #fff;
+/* цвет, размер текста, содержащий название сайта или бренда */
+.navbar-default .navbar-brand {
+	color: white;
 	font-size: 18pt;
+}
+
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: white;
+}
+
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: black;
+}
+
+/* Цвет обводки пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > li:hover,
+.navbar-default .navbar-nav > li:focus {
+	background: #17A2B8;
+}
+
+/* цвет, размер текста пункта меню */
+.nav-link{
+	color: white;
+	font-size: 12pt;
 	font-weight: bold;
 
 }
+/*цвет и толщина линии обводки кнопки свернутого меню*/
+.navbar-default .navbar-toggle{
+	border-color: white;
+	border-width: 2px;
+}
+/*цвет заливки кнопки сворачивающее меню меню*/
+.navbar-default .navbar-header > button:hover,
+.navbar-default .navbar-header > button:focus{
+	background: #17A2B8;
 
-.btn-info{
-	margin-right: 5pt;
-	width: 150px;
+}
+.navbar-toggle.minus.collapsed .icon-bar:nth-of-type(1) {
+	transform: translate3d(0,0,0) rotate(0deg);
 }
 
-.form-control:focus {
-	outline: 0 !important;
-	border-color: initial;
-	box-shadow: none;
+.navbar-toggle.minus.collapsed .icon-bar:nth-of-type(2) {
+	transform: translate3d(0,0,0) rotate(0deg);
+	background: white;
+}
+
+.navbar-toggle.minus.collapsed .icon-bar:nth-of-type(3) {
+	transform: translate3d(0,0,0) rotate(0deg);
+	background: white;
+}
+
+.navbar-toggle.minus .icon-bar:nth-of-type(1) {
+	transform: translate3d(0,6px,0);
+	background: white;
+}
+
+.navbar-toggle.minus .icon-bar:nth-of-type(3) {
+	transform: translate3d(0,-6px,0);
+	background: white;
 }
