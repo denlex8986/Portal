@@ -4,8 +4,6 @@
 	<meta charset="UTF-8">
 	<title th:title="#{main.page}">Главная страница</title>
 
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="../static/css/main.css" th:href="@{/css/main.css}" type="text/css" rel="stylesheet">
@@ -58,9 +56,50 @@
     </nav>
 </div>
 
+<!-- Диалог регистрации -->
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+	 aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel" th:text="#{registration}">Регистрация</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="email" class="col-form-label" th:text="#{registration.email}">e-mail</label>
+						<input id="email" class="form-control" type="input"
+							   th:placeholder="#{registration.email}"
+							   placeholder="E-mail">
+					</div>
 
+					<div class="form-group">
+						<label for="login" class="col-form-label">Логин</label>
+						<input id="login" class="form-control" type="text"
+							   th:placeholder="#{registration.login}"
+							   placeholder="Логин">
+					</div>
 
+					<div class="form-group">
+						<label for="password" class="col-form-label">Пароль</label>
+						<input id="password" class="form-control" type="password"
+							   th:placeholder="#{registration.password}"
+							   placeholder="Пароль">
+					</div>
 
+					<button class="btn btn-dark" id="register" type="submit"
+							th:text="#{registration.register}">Зарегистрироваться
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
@@ -70,7 +109,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
-<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
 
 </body>
 </html>

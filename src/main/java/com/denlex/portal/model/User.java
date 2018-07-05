@@ -28,7 +28,14 @@ public class User {
 	@Transient
 	private String password;
 
+	public User() {
+	}
 
+	public User(@Email(message = "Please provide a valid e-mail") @NotEmpty(message = "Please provide an e-mail") String email, @NotEmpty(message = "Please provide your login") String login, String password) {
+		this.email = email;
+		this.login = login;
+		this.password = password;
+	}
 
 	public Long getId() {
 		return id;

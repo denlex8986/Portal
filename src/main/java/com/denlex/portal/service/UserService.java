@@ -8,9 +8,9 @@ import java.util.List;
  * Created by Shishkov A.V. on 06.06.18.
  */
 public interface UserService {
-	void saveUser(User user);
+	void save(User user);
 
-	List<User> getAllUsers();
+	List<User> findAll();
 
 	User findByEmail(String email);
 }

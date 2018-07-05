@@ -26,7 +26,7 @@ public class UserRegistrationController {
 	@PostMapping(path = "/register")
 	public ResponseEntity<User> registerUser(@RequestBody User user) {
 		logger.info("User was register");
-		userService.saveUser(user);
+		userService.save(user);
 		return new ResponseEntity<>(user, HttpStatus.OK);
 	}
 
