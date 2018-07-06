@@ -5,6 +5,54 @@ html {
 .container-fluid{
 	background: #046169;
 }
+
+/*цвет, кнопки в меню*/
+.btn.btn-default{
+    background: #5bc0de;
+    border-color: white;
+    border-width: 1.5px;
+    color: white;
+    font-size: 12pt;
+    width: 130px;
+    margin-right: 4px;
+
+}
+/*цвет, кнопки в меню при наведении мышки*/
+.btn.btn-default:hover,
+.btn.btn-default:focus{
+    background: #046169;
+    border-color: white;
+    color: white;
+}
+/*цвет кнопки при нажатии*/
+.btn.btn-default:active{
+    background: #10898d;
+    border-color: white;
+    color: white;
+}
+
+/*цвет, кнопки в меню при наведении мышки*/
+#search{
+    background: #5bc0de;
+    border-color: white;
+    border-width: 1.5px;
+    color: white;
+    font-size: 12pt;
+    width: auto;
+ }
+/*цвет, кнопки поиска в меню при наведении мышки или фокус*/
+#search:hover,
+#search:focus{
+    background: #046169;
+    background-color: #046169;
+    color: white;
+
+}/*цвет, кнопки поиска в меню при нажатии*/
+#search:active{
+    background-color: #10898d;
+    color: white;
+}
+
 /*Убираем линии в развернутом меню на маленьком экране*/
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
 	border-color: transparent;
@@ -21,6 +69,7 @@ html {
 	border-top-right-radius: 0px;
 
 }
+
 /* Цвет пунктов навигационного меню */
 .navbar-default .navbar-nav > li > a {
 	color: white;
@@ -47,7 +96,7 @@ html {
 /* Цвет обводки пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
 .navbar-default .navbar-nav > li:hover,
 .navbar-default .navbar-nav > li:focus {
-	background: #17A2B8;
+	background: #5bc0de;
 }
 
 /* цвет, размер текста пункта меню */
