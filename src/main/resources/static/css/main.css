@@ -154,7 +154,7 @@ span.textSearchButton:after {
 при размере ког
  */
 /* sm-размер (<=768px) */
-@media (max-width: 800px) {
+@media (max-width: 762px) {
 
 	#search{
 
