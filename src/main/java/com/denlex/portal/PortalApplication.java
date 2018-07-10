@@ -17,7 +17,7 @@ public class PortalApplication {
 	@Bean
 	public LocaleResolver localeResolver() {
 		SessionLocaleResolver slr = new SessionLocaleResolver();
-		slr.setDefaultLocale(Locale.getDefault());
+		slr.setDefaultLocale(new Locale("ru", "RU"));
 		return slr;
 	}
 
