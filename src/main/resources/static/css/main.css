@@ -31,6 +31,14 @@ html {
     color: white;
 }
 
+span.textSearchButton:after {
+	visibility: visible;
+	content: "Поиск";
+}
+
+/*.iconSearchButton{
+	   visibility: hidden;
+   }*/
 /*цвет, кнопки в меню при наведении мышки*/
 #search{
     background: #5bc0de;
@@ -39,6 +47,7 @@ html {
     color: white;
     font-size: 12pt;
     width: auto;
+	text-align: center;
  }
 /*цвет, кнопки поиска в меню при наведении мышки или фокус*/
 #search:hover,
@@ -139,4 +148,25 @@ html {
 .navbar-toggle.minus .icon-bar:nth-of-type(3) {
 	transform: translate3d(0,-6px,0);
 	background: white;
+}
+
+/**Где стиль?/
+при размере ког
+ */
+/* sm-размер (<=768px) */
+@media (max-width: 767px) {
+
+	#search{
+
+		width: 50px;
+		height: 40px;
+	}
+
+	span.textSearchButton:after {
+		visibility: visible;
+		content:url("../img/svg/search.svg");
+	}
+
+
+
 }
