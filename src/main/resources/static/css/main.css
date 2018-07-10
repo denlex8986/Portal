@@ -6,6 +6,13 @@ html {
 	background: #046169;
 }
 
+.modal-content{
+    background: #10898d;
+    border-color: white;
+    border-width: 1.5px;
+}
+
+
 /*цвет, кнопки в меню*/
 .btn.btn-default{
     background: #5bc0de;
@@ -13,9 +20,8 @@ html {
     border-width: 1.5px;
     color: white;
     font-size: 12pt;
-    width: 130px;
+    min-width: 130px;
     margin-right: 4px;
-
 }
 /*цвет, кнопки в меню при наведении мышки*/
 .btn.btn-default:hover,
@@ -30,15 +36,13 @@ html {
     border-color: white;
     color: white;
 }
-
+/*Изменияем контент кнопки Поиска*/
 span.textSearchButton:after {
 	visibility: visible;
 	content: "Поиск";
 }
 
-/*.iconSearchButton{
-	   visibility: hidden;
-   }*/
+
 /*цвет, кнопки в меню при наведении мышки*/
 #search{
     background: #5bc0de;
@@ -68,6 +72,20 @@ span.textSearchButton:after {
 	box-shadow: none;
 }
 
+/*Убираем белые линии в модальном окне*/
+.modal-header ,.modal-footer {
+    border-color: transparent;
+    box-shadow: none;
+}
+/*Выравниваем кнопку Зарегистрироваться в модальном окне по центру*/
+.modal-footer{
+    text-align: center;
+}
+
+/*Делаем кнопку Зарегистрироваться на все окно регистрации*/
+#register{
+    width: 100%;
+}
 /* цвет фона и рамки навигационного меню */
 .navbar-default{
 	background-color: #10898d;
@@ -150,9 +168,18 @@ span.textSearchButton:after {
 	background: white;
 }
 
-/**Где стиль?/
-при размере ког
- */
+/*Настраиваем надписи в окне регистрации*/
+.col-form-label{
+    color: white;
+    font-size: 12pt;
+    font-weight: bold;
+}
+/*Настраиваем заголовок в окне регистрации*/
+.modal-title{
+    color: white;
+    font-size: 18pt;
+}
+
 /* sm-размер (<=768px) */
 @media (max-width: 762px) {
 
@@ -167,3 +194,5 @@ span.textSearchButton:after {
 		content:url("../img/svg/search.svg");
 	}
 }
+
+
