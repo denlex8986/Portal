@@ -36,34 +36,62 @@ html {
     border-color: white;
     color: white;
 }
-/*Изменияем контент кнопки Поиска*/
-span.textSearchButton:after {
+
+/*Скрываем маленькую поисковую строку на большом экране*/
+#searchSmall{
+	visibility: collapse;
+}
+/*Показываем большой поиск на большом экране*/
+#searchBig{
 	visibility: visible;
-	content: "Поиск";
 }
 
-
-/*цвет, кнопки в меню при наведении мышки*/
-#search{
+/*цвет, кнопки поиска в меню при наведении мышки*/
+#bigSearchButton{
     background: #5bc0de;
     border-color: white;
     border-width: 1.5px;
     color: white;
     font-size: 12pt;
     width: auto;
+	margin-left: 5px;
 	text-align: center;
  }
+
 /*цвет, кнопки поиска в меню при наведении мышки или фокус*/
-#search:hover,
-#search:focus{
+#bigSearchButton:hover,
+#bigSearchButton:focus{
     background: #046169;
     background-color: #046169;
     color: white;
 
 }/*цвет, кнопки поиска в меню при нажатии*/
-#search:active{
+#bigSearchButton:active{
     background-color: #10898d;
     color: white;
+}
+
+/*цвет, кнопки поиска в меню при наведении мышки*/
+#smallSearchButton{
+	background: #5bc0de;
+	border-color: white;
+	border-width: 1.5px;
+	color: white;
+	margin: auto;
+	text-align: center;
+}
+
+/*цвет, кнопки поиска в меню при наведении мышки или фокус*/
+#smallSearchButton:hover,
+#smallSearchButton:focus{
+	background: #046169;
+	background-color: #046169;
+	color: white;
+
+}/*цвет, кнопки поиска в меню при нажатии*/
+#smallSearchButton:active{
+	background-color: #10898d;
+	color: white;
 }
 
 /*Убираем линии в развернутом меню на маленьком экране*/
@@ -180,19 +208,100 @@ span.textSearchButton:after {
     font-size: 18pt;
 }
 
-/* sm-размер (<=768px) */
-@media (max-width: 762px) {
-
-	#search{
-
-		width: 50px;
-		height: 40px;
-	}
-
-	span.textSearchButton:after {
-		visibility: visible;
-		content:url("../img/svg/search.svg");
-	}
+#loginTitle {
+	position: relative;
 }
+
+#loginTitle .required-icon {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.5em 0.8em;
+	text-transform: uppercase;
+	font-weight: normal;
+	border-radius: 0em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: background 0.1s linear;
+	-moz-transition: background 0.1s linear;
+	transition: background 0.1s linear;
+	font-size: 100%;
+}
+
+#loginTitle .required-icon {
+	background-color: transparent;
+	position: absolute;
+	top: 29px;
+	right: 0.4px;
+	z-index: 10;
+	margin: 0em;
+	width: 32px;
+	height: 32px;
+	padding: 0em;
+	text-align: center;
+	-webkit-transition: color 0.2s ease;
+	-moz-transition: color 0.2s ease;
+	transition: color 0.2s ease;
+}
+
+#loginTitle .required-icon:after {
+	position: absolute;
+	content: "";
+	right: 1px;
+	top: 0px;
+	z-index: -1;
+	width: 0em;
+	height: 0em;
+	border-top: 0em solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-left: 0px solid transparent;
+	border-right-color: #5bc0de ;
+	-webkit-transition: border-color 0.2s ease;
+	-moz-transition: border-color 0.2s ease;
+	transition: border-color 0.2s ease;
+}
+
+#loginTitle .required-icon .text {
+	color: rgba(0, 0, 0, 0.65);
+	font-size: 18px;
+	font-weight: bold;
+	margin: -3px 0 0 12px;
+}
+
+.tooltip.left .tooltip-inner {
+	background-color:#046169;
+	font-size: 15px;
+	text-align: justify;
+	opacity: 100;
+}
+
+/* sm-размер
+(<=768px) */
+@media (max-width: 760px) {
+#searchSmall {
+	visibility: visible;
+}
+#searchBig{
+	visibility: collapse;
+}
+.navbar-form{
+	text-align: center;
+}
+.btn.btn-default
+{
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+}
+/*@media (width: 768px)
+{
+	#formRegistration{
+		margin-top: -44px;
+	}
+}*/
+
 
 
