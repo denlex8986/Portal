@@ -1,7 +1,7 @@
 package com.denlex.portal;
 
-import com.denlex.portal.model.User;
-import com.denlex.portal.service.UserService;
+import com.denlex.portal.model.Account;
+import com.denlex.portal.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,18 +13,18 @@ import javax.annotation.PostConstruct;
 @Component
 public class InitializerBean {
 	@Autowired
-	private UserService userService;
+	private AccountService accountService;
 
 	@PostConstruct
 	public void init() {
-		userService.save(new User("vanya@mail.ru", "vanya", "vanya"));
-		userService.save(new User("alex@mail.ru", "alex", "alex"));
-		userService.save(new User("denis@mail.ru", "denis", "denis"));
-		userService.save(new User("eugen@gmail.com", "eugen", "eugen"));
-		userService.save(new User("karoline@gmail.com", "karoline", "karoline"));
-		userService.save(new User("simon@yahoo.com", "simon", "simon"));
-		userService.save(new User("artur@rambler.com", "rambler", "rambler"));
-		userService.save(new User("flash@yandex.ru", "flash", "flash"));
-		userService.save(new User("roxy@gmail.com", "roxy", "roxy"));
+		accountService.save(new Account("vanya@mail.ru", "vanya", "vanya"));
+		accountService.save(new Account("alex@mail.ru", "alex", "alex"));
+		accountService.save(new Account("denis@mail.ru", "denis", "denis"));
+		accountService.save(new Account("eugen@gmail.com", "eugen", "eugen"));
+		accountService.save(new Account("karoline@gmail.com", "karoline", "karoline"));
+		accountService.save(new Account("simon@yahoo.com", "simon", "simon"));
+		accountService.save(new Account("artur@rambler.com", "rambler", "rambler"));
+		accountService.save(new Account("flash@yandex.ru", "flash", "flash"));
+		accountService.save(new Account("roxy@gmail.com", "roxy", "roxy"));
 	}
 }

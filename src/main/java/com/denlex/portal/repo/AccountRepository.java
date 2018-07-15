@@ -1,6 +1,6 @@
 package com.denlex.portal.repo;
 
-import com.denlex.portal.model.User;
+import com.denlex.portal.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
  * Created by Shishkov A.V. on 06.06.18.
  */
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
-	User findByEmail(String email);
+public interface AccountRepository extends JpaRepository<Account, Long> {
+	Account findByEmail(String email);
 }

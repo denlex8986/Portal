@@ -1,3 +1,4 @@
+/*
 html {
 	background: #046169;
 }
@@ -13,7 +14,7 @@ html {
 }
 
 
-/*цвет, кнопки в меню*/
+!*цвет, кнопки в меню*!
 .btn.btn-default{
     background: #5bc0de;
     border-color: white;
@@ -23,30 +24,30 @@ html {
     min-width: 130px;
     margin-right: 4px;
 }
-/*цвет, кнопки в меню при наведении мышки*/
+!*цвет, кнопки в меню при наведении мышки*!
 .btn.btn-default:hover,
 .btn.btn-default:focus{
     background: #046169;
     border-color: white;
     color: white;
 }
-/*цвет кнопки при нажатии*/
+!*цвет кнопки при нажатии*!
 .btn.btn-default:active{
     background: #10898d;
     border-color: white;
     color: white;
 }
 
-/*Скрываем маленькую поисковую строку на большом экране*/
+!*Скрываем маленькую поисковую строку на большом экране*!
 #searchSmall{
 	visibility: collapse;
 }
-/*Показываем большой поиск на большом экране*/
+!*Показываем большой поиск на большом экране*!
 #searchBig{
 	visibility: visible;
 }
 
-/*цвет, кнопки поиска в меню при наведении мышки*/
+!*цвет, кнопки поиска в меню при наведении мышки*!
 #bigSearchButton{
     background: #5bc0de;
     border-color: white;
@@ -58,20 +59,20 @@ html {
 	text-align: center;
  }
 
-/*цвет, кнопки поиска в меню при наведении мышки или фокус*/
+!*цвет, кнопки поиска в меню при наведении мышки или фокус*!
 #bigSearchButton:hover,
 #bigSearchButton:focus{
     background: #046169;
     background-color: #046169;
     color: white;
 
-}/*цвет, кнопки поиска в меню при нажатии*/
+}!*цвет, кнопки поиска в меню при нажатии*!
 #bigSearchButton:active{
     background-color: #10898d;
     color: white;
 }
 
-/*цвет, кнопки поиска в меню при наведении мышки*/
+!*цвет, кнопки поиска в меню при наведении мышки*!
 #smallSearchButton{
 	background: #5bc0de;
 	border-color: white;
@@ -81,40 +82,40 @@ html {
 	text-align: center;
 }
 
-/*цвет, кнопки поиска в меню при наведении мышки или фокус*/
+!*цвет, кнопки поиска в меню при наведении мышки или фокус*!
 #smallSearchButton:hover,
 #smallSearchButton:focus{
 	background: #046169;
 	background-color: #046169;
 	color: white;
 
-}/*цвет, кнопки поиска в меню при нажатии*/
+}!*цвет, кнопки поиска в меню при нажатии*!
 #smallSearchButton:active{
 	background-color: #10898d;
 	color: white;
 }
 
-/*Убираем линии в развернутом меню на маленьком экране*/
+!*Убираем линии в развернутом меню на маленьком экране*!
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
 	border-color: transparent;
 	box-shadow: none;
 }
 
-/*Убираем белые линии в модальном окне*/
+!*Убираем белые линии в модальном окне*!
 .modal-header ,.modal-footer {
     border-color: transparent;
     box-shadow: none;
 }
-/*Выравниваем кнопку Зарегистрироваться в модальном окне по центру*/
+!*Выравниваем кнопку Зарегистрироваться в модальном окне по центру*!
 .modal-footer{
     text-align: center;
 }
 
-/*Делаем кнопку Зарегистрироваться на все окно регистрации*/
+!*Делаем кнопку Зарегистрироваться на все окно регистрации*!
 #register{
     width: 100%;
 }
-/* цвет фона и рамки навигационного меню */
+!* цвет фона и рамки навигационного меню *!
 .navbar-default{
 	background-color: #10898d;
 	border-color: #10898d;
@@ -125,48 +126,48 @@ html {
 
 }
 
-/* Цвет пунктов навигационного меню */
+!* Цвет пунктов навигационного меню *!
 .navbar-default .navbar-nav > li > a {
 	color: white;
 }
 
-/* цвет, размер текста, содержащий название сайта или бренда */
+!* цвет, размер текста, содержащий название сайта или бренда *!
 .navbar-default .navbar-brand {
 	color: white;
 	font-size: 18pt;
 }
 
-/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+!* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе *!
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
 	color: white;
 }
 
-/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+!* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе *!
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
 	color: black;
 }
 
-/* Цвет обводки пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+!* Цвет обводки пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе *!
 .navbar-default .navbar-nav > li:hover,
 .navbar-default .navbar-nav > li:focus {
 	background: #5bc0de;
 }
 
-/* цвет, размер текста пункта меню */
+!* цвет, размер текста пункта меню *!
 .nav-link{
 	color: white;
 	font-size: 12pt;
 	font-weight: bold;
 
 }
-/*цвет и толщина линии обводки кнопки свернутого меню*/
+!*цвет и толщина линии обводки кнопки свернутого меню*!
 .navbar-default .navbar-toggle{
 	border-color: white;
 	border-width: 2px;
 }
-/*цвет заливки кнопки сворачивающее меню меню*/
+!*цвет заливки кнопки сворачивающее меню меню*!
 .navbar-default .navbar-header > button:hover,
 .navbar-default .navbar-header > button:focus{
 	background: #17A2B8;
@@ -196,13 +197,13 @@ html {
 	background: white;
 }
 
-/*Настраиваем надписи в окне регистрации*/
+!*Настраиваем надписи в окне регистрации*!
 .col-form-label{
     color: white;
     font-size: 12pt;
     font-weight: bold;
 }
-/*Настраиваем заголовок в окне регистрации*/
+!*Настраиваем заголовок в окне регистрации*!
 .modal-title{
     color: white;
     font-size: 18pt;
@@ -277,8 +278,8 @@ html {
 	opacity: 100;
 }
 
-/* sm-размер
-(<=768px) */
+!* sm-размер
+(<=768px) *!
 @media (max-width: 760px) {
 #searchSmall {
 	visibility: visible;
@@ -296,12 +297,20 @@ html {
 }
 
 }
-/*@media (width: 768px)
+!*@media (width: 768px)
 {
 	#formRegistration{
 		margin-top: -44px;
 	}
-}*/
+}*!
 
 
+*/
 
+.no-wrap-form {
+	flex-flow: nowrap;
+}
+
+a.nav-link {
+	white-space: nowrap;
+}

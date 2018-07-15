@@ -37,7 +37,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/users}" href="/users">Пользователи</a>
+					<a class="nav-link" th:href="@{/accounts}" href="/accounts">Пользователи</a>
 				</li>
 			</ul>
 		</div>
@@ -72,10 +72,10 @@
 			</tr>
 			</thead>
 			<tbody>
-			<tr th:each="user : ${users}">
-				<td th:text="${user.id}"></td>
-				<td th:text="${user.email}"></td>
-				<td th:text="${user.login}"></td>
+			<tr th:each="account : ${accounts}">
+				<td th:text="${account.id}"></td>
+				<td th:text="${account.email}"></td>
+				<td th:text="${account.login}"></td>
 			</tr>
 			</tbody>
 		</table>

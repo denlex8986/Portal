@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	</script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous">
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+		  integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+
+	<link href="../static/css/main.css" th:href="@{/css/main.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div th:fragment="navbar">
+	<!--<nav class="navbar sticky-top navbar-default navbar-expand-sm" role="navigation">
+		<a class="navbar-brand" href="#">Логотип</a>
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle minus collapsed" data-toggle="collapse"
+					data-target="#navbar-collapse-minus">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-minus">
+			<ul class="nav navbar-nav navbar-left">
+				<li>
+					<a class="nav-link" href="#" th:text="#{translations.active}">Активные трансляции</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#" th:text="#{videos}">Видеоматериалы</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#" th:text="#{forum}">Форум</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#" th:text="#{help}">Помощь</a>
+				</li>
+			</ul>
+			<form class="navbar-form navbar-left" id="searchBig" role="search">
+				<div class="input-group" id="bigSearch">
+					<div class="form-group">
+						<input type="text" class="form-control" id="form-control" placeholder="Найти"
+							   th:placeholder="#{search.find}">
+					</div>
+					<button type="submit" class="btn btn-default" id="bigSearchButton">
+						<span class="textSearchButton">Поиск</span>
+					</button>
+				</div>
+				<div class="input-group" id="searchSmall">
+					<input type="text" class="form-control SearchBar" placeholder="Найти"
+						   th:placeholder="#{search.find}">
+					<span class="input-group-btn">
+						<button class="btn btn-defaul" type="button" id="smallSearchButton">
+							<span class=" glyphicon glyphicon-search SearchIcon"></span>
+						</button>
+					</span>
+				</div>
+			</form>
+			<form class="navbar-form navbar-right" id="formRegistration">
+				<button class="btn btn-default" id="comeInButton" type="button" data-toggle="modal" data-target="#"
+						th:text="#{registration.sign.in}">Войти
+				</button>
+				<button class="btn btn-default" id="registrationButton" type="button" data-toggle="modal"
+						data-target="#registrationModal" th:text="#{registration}">Регистрация
+				</button>
+			</form>
+		</div>
+	</nav>-->
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<a class="navbar-brand" href="#">Логотип</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#" th:text="#{translations.active}">Активные трансляции</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" th:text="#{videos}">Видеоматериалы</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" th:text="#{forum}">Форум</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" th:text="#{help}">Помощь</a>
+					</li>
+				</ul>
+				<form class="form-inline mt-2 mt-md-0 no-wrap-form">
+					<input class="form-control mr-sm-2" type="text" placeholder="Поиск" th:placeholder="#{search}"
+						   aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+				</form>
+				<form class="form-inline mt-2 mt-md-0 no-wrap-form">
+					<button class="btn btn-outline-success my-2 my-sm-0" id="comeInButton" type="button" data-toggle="modal" data-target="#"
+							th:text="#{registration.sign.in}">Войти
+					</button>
+					<button class="btn btn-outline-success my-2 my-sm-0" id="registrationButton" type="button" data-toggle="modal"
+							data-target="#registrationModal" th:text="#{registration}">Регистрация
+					</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+</div>
+
+<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+		integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+		crossorigin="anonymous"></script>
+</body>
+</html>

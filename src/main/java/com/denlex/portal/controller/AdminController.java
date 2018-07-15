@@ -1,6 +1,6 @@
 package com.denlex.portal.controller;
 
-import com.denlex.portal.service.UserService;
+import com.denlex.portal.service.AccountService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -17,15 +17,15 @@ public class AdminController {
 
 	private final  static Logger logger = LogManager.getLogger(AdminController.class);
 
-	private UserService userService;
+	private AccountService accountService;
 
-	public AdminController(UserService userService) {
-		this.userService = userService;
+	public AdminController(AccountService accountService) {
+		this.accountService = accountService;
 	}
 
-	@GetMapping("/users")
-	public String getUsers(Model model) {
-		model.addAttribute("users", userService.findAll());
-		return "users";
+	@GetMapping("/accounts")
+	public String getAccounts(Model model) {
+		model.addAttribute("accounts", accountService.findAll());
+		return "accounts";
 	}
 }
