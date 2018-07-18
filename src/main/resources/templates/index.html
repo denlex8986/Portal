@@ -5,25 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title th:title="#{main.page}">Главная страница</title>
 
-	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-	</script>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-			crossorigin="anonymous">
-	</script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<link href="../static/css/main.css" th:href="@{/css/main.css}" type="text/css" rel="stylesheet">
-
--->
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
 		  integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
@@ -32,8 +13,231 @@
 	<link href="../static/css/main.css" th:href="@{/css/main.css}" type="text/css" rel="stylesheet">
 </head>
 <body id="main">
-<th:block th:include="/navbar :: navbar"></th:block>
+<!--<th:block th:include="/navbar :: navbar"></th:block>-->
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<a class="navbar-brand" href="#">Логотип</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+				aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#" th:text="#{translations.active}">Активные трансляции</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" th:text="#{videos}">Видеоматериалы</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" th:text="#{forum}">Форум</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" th:text="#{help}">Помощь</a>
+				</li>
+			</ul>
+			<form class="form-inline mt-2 mt-md-0 no-wrap-form">
+				<input class="form-control mr-sm-2" type="text" placeholder="Поиск" th:placeholder="#{search}"
+					   aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+			</form>
+			<form class="form-inline mt-2 mt-md-0 no-wrap-form">
+				<button class="btn btn-outline-success my-2 my-sm-0" id="comeInButton" type="button" data-toggle="modal" data-target="#"
+						th:text="#{registration.sign.in}">Войти
+				</button>
+				<button class="btn btn-outline-success my-2 my-sm-0" id="registrationButton" type="button" data-toggle="modal"
+						data-target="#registrationModal" th:text="#{registration}">Регистрация
+				</button>
+			</form>
+		</div>
+	</nav>
+</header>
 
+<main>
+	<section class="jumbotron text-center">
+		<div class="container">
+			<h1 class="jumbotron-heading">Album example</h1>
+			<p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
+				etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+			<p>
+				<a href="#" class="btn btn-primary my-2">Main call to action</a>
+				<a href="#" class="btn btn-secondary my-2">Secondary action</a>
+			</p>
+		</div>
+	</section>
+
+	<div class="album py-5 bg-light">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow">
+						<img class="card-img-top"
+							 data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+							 alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+								additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow">
+						<img class="card-img-top"
+							 data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+							 alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+								additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow">
+						<img class="card-img-top"
+							 data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+							 alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+								additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow">
+						<img class="card-img-top"
+							 data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+							 alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+								additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow">
+						<img class="card-img-top"
+							 data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+							 alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+								additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow">
+						<img class="card-img-top"
+							 data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+							 alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+								additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow">
+						<img class="card-img-top"
+							 data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+							 alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+								additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow">
+						<img class="card-img-top"
+							 data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+							 alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+								additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow">
+						<img class="card-img-top"
+							 data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+							 alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+								additional content. This content is a little bit longer.</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
 
 <!-- Диалог регистрации -->
 <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
@@ -89,13 +293,13 @@
 
 
 <script>
-    $(function () {
-        $('.required-icon').tooltip({
-            placement: 'left',
-            title: 'Логин в последующем можно будет изменить!'
+	$(function () {
+		$('.required-icon').tooltip({
+			placement: 'left',
+			title: 'Логин в последующем можно будет изменить!'
 
-        });
-    });
+		});
+	});
 </script>
 
 <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
