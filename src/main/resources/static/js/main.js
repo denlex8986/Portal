@@ -18,13 +18,16 @@ $(document).ready(function () {
 		var userJSON = JSON.stringify(user);
 
 		$.ajax({
-			url: "/register",
+			url: "/accounts/register",
 			type: "POST",
 			data: userJSON,
 			dataType: "json",
 			contentType: "application/json; charset=utf-8",
 			success: function () {
-				console.log("УРАА");
+				console.log("Registration success");
+			},
+			error: function (){
+				console.log("Registration ERROR")
 			}
 		});
 

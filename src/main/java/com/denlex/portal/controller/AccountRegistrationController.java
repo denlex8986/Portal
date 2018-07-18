@@ -25,8 +25,8 @@ public class AccountRegistrationController {
 
 	private final  static Logger logger = LogManager.getLogger(AccountRegistrationController.class);
 
-	@PostMapping(path = "/register")
-	public String registerUser(@Valid Account account, BindingResult bindingResult) {
+	@PostMapping(path = "/accounts/register")
+	public String registerUser(@Valid @RequestBody Account account, BindingResult bindingResult) {
 
 		if (bindingResult.hasErrors())
 			return "error";

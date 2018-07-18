@@ -314,3 +314,7 @@ html {
 a.nav-link {
 	white-space: nowrap;
 }
+
+.bg-dark {
+	/*background-color: #4d4b47!important;*/
+}

@@ -56,7 +56,7 @@
 <main>
 	<section class="jumbotron text-center">
 		<div class="container">
-			<h1 class="jumbotron-heading">Album example</h1>
+			<h1 class="jumbotron-heading">Активные трансляции</h1>
 			<p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
 				etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
 			<p>
@@ -66,9 +66,8 @@
 		</div>
 	</section>
 
-	<div class="album py-5 bg-light">
+	<div class="album py-5 bg-dark">
 		<div class="container">
-
 			<div class="row">
 				<div class="col-md-4">
 					<div class="card mb-4 box-shadow">
@@ -245,26 +244,22 @@
 	<div class="modal-dialog modal-sm" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#10006;</button>
 				<h4 class="modal-title" th:text="#{registration}">Регистрация</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#10006;</button>
 			</div>
 			<div class="modal-body">
-				<form th:action="@{/register}" th:object="${account}" method="post" class="modal-form"
+				<form method="post" class="modal-form"
 					  autocomplete="off">
 					<div class="form-group">
 						<label for="email" class="col-form-label" th:text="#{registration.email}">e-mail</label>
 						<input id="email" class="form-control" type="input"
-							   th:field="*{email}"
 							   th:placeholder="#{registration.email}" placeholder="E-mail">
-						<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
-							  th:text="#{errors.email.notvalid}"/>
 					</div>
 
 					<div class="form-group" id="loginTitle">
 						<label class="col-form-label" for="login" th:text="#{registration.login}">Логин</label>
 						<input id="login" class="form-control" type="text"
-							   th:placeholder="#{registration.login}" placeholder="Логин"
-							   th:field="*{login}">
+							   th:placeholder="#{registration.login}" placeholder="Логин">
 						<div class="required-icon">
 							<div class="text">&#33</div>
 						</div>
@@ -273,8 +268,7 @@
 					<div class="form-group">
 						<label for="password" class="col-form-label" th:text="#{registration.password}">Пароль</label>
 						<input id="password" class="form-control" type="password"
-							   th:placeholder="#{registration.password}" placeholder="Пароль"
-							   th:field="*{password}">
+							   th:placeholder="#{registration.password}" placeholder="Пароль">
 					</div>
 				</form>
 			</div>
@@ -302,11 +296,12 @@
 	});
 </script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+
 <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
 		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 		crossorigin="anonymous"></script>

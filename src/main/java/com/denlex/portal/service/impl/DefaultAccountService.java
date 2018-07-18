@@ -5,6 +5,7 @@ import com.denlex.portal.model.Account;
 import com.denlex.portal.service.AccountService;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.StreamSupport;
@@ -13,6 +14,7 @@ import java.util.stream.StreamSupport;
  * Created by Shishkov A.V. on 06.06.18.
  */
 @Service
+@Transactional
 public class DefaultAccountService implements AccountService {
 
 	private AccountRepository accountRepository;
