@@ -1,6 +1,6 @@
 package com.denlex.portal.controller;
 
-import com.denlex.portal.model.Account;
+import com.denlex.portal.domain.Account;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;

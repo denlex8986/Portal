@@ -318,3 +318,15 @@ a.nav-link {
 .bg-dark {
 	/*background-color: #4d4b47!important;*/
 }
+
+.form-control.reg-form-input {
+	background: no-repeat right 8px center;
+}
+
+.form-control.reg-form-input.error {
+	background-image: url("../img/user_reg/error.png");
+}
+
+.form-control.reg-form-input.success {
+	background-image: url("../img/user_reg/success.png");
+}

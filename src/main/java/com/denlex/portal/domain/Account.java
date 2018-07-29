@@ -1,4 +1,4 @@
-package com.denlex.portal.model;
+package com.denlex.portal.domain;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;

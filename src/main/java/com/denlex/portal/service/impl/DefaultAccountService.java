@@ -1,7 +1,7 @@
 package com.denlex.portal.service.impl;
 
 import com.denlex.portal.repo.AccountRepository;
-import com.denlex.portal.model.Account;
+import com.denlex.portal.domain.Account;
 import com.denlex.portal.service.AccountService;
 import org.springframework.stereotype.Service;
 
@@ -38,5 +38,10 @@ public class DefaultAccountService implements AccountService {
 	@Override
 	public Account findByEmail(String email) {
 		return accountRepository.findByEmail(email);
+	}
+
+	@Override
+	public Account findByLogin(String login) {
+		return accountRepository.findByLogin(login);
 	}
 }

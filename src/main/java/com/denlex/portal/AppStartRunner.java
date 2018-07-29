@@ -1,22 +1,22 @@
 package com.denlex.portal;
 
-import com.denlex.portal.model.Account;
+import com.denlex.portal.domain.Account;
 import com.denlex.portal.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
 /**
- * Created by Shishkov A.V. on 04.07.18.
+ * Created by Shishkov A.V. on 29.07.18.
  */
 @Component
-public class InitializerBean {
+public class AppStartRunner implements ApplicationRunner {
 	@Autowired
 	private AccountService accountService;
 
-	@PostConstruct
-	public void init() {
+	@Override
+	public void run(ApplicationArguments args) {
 		accountService.save(new Account("vanya@mail.ru", "vanya", "vanya"));
 		accountService.save(new Account("alex@mail.ru", "alex", "alex"));
 		accountService.save(new Account("denis@mail.ru", "denis", "denis"));

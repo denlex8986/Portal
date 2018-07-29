@@ -11,6 +11,10 @@
 
 
 	<link href="../static/css/main.css" th:href="@{/css/main.css}" type="text/css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
 </head>
 <body id="main">
 <!--<th:block th:include="/navbar :: navbar"></th:block>-->
@@ -252,13 +256,14 @@
 					  autocomplete="off">
 					<div class="form-group">
 						<label for="email" class="col-form-label" th:text="#{registration.email}">e-mail</label>
-						<input id="email" class="form-control" type="input"
+						<input id="email" class="form-control reg-form-input" type="input"
 							   th:placeholder="#{registration.email}" placeholder="E-mail">
+						<label id="email_info"></label>
 					</div>
 
 					<div class="form-group" id="loginTitle">
 						<label class="col-form-label" for="login" th:text="#{registration.login}">Логин</label>
-						<input id="login" class="form-control" type="text"
+						<input id="login" class="form-control reg-form-input" type="text"
 							   th:placeholder="#{registration.login}" placeholder="Логин">
 						<div class="required-icon">
 							<div class="text">&#33</div>
@@ -296,9 +301,7 @@
 	});
 </script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		crossorigin="anonymous"></script>
+
 
 <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
 

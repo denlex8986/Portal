@@ -1,6 +1,6 @@
 package com.denlex.portal.service;
 
-import com.denlex.portal.model.Account;
+import com.denlex.portal.domain.Account;
 
 import java.util.List;
 
@@ -13,4 +13,6 @@ public interface AccountService {
 	List<Account> findAll();
 
 	Account findByEmail(String email);
+
+	Account findByLogin(String login);
 }

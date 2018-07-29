@@ -1,6 +1,6 @@
 package com.denlex.portal.controller;
 
-import com.denlex.portal.model.Account;
+import com.denlex.portal.domain.Account;
 import com.denlex.portal.service.AccountService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
